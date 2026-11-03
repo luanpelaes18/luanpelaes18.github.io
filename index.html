@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13152a">
+  <title>Luã Pelaes</title>
+  <meta name="description" content="Luã Pelaes, técnico em TI. Estudos e projetos em tecnologia e segurança.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>LUÃ <b>PELAES</b></a>
+      <nav class="nav-right">
+        <a class="nav-link" href="#conteudo" data-i18n="nav_conteudo"></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow"><i></i><span data-i18n="status"></span></p>
+        <h1>Luã <em>Pelaes</em></h1>
+        <p class="lead" data-i18n="lead"></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#conteudo" data-i18n="cta"></a>
+          <a class="btn btn-outline" href="https://github.com/luanpelaes18">GitHub</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/luanpelaes/">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="content">
+      <div class="wrap">
+        <h2 data-i18n="titulo_conteudo"></h2>
+        <label class="search">
+          <input id="busca" type="search" data-i18n-placeholder="busca" autocomplete="off">
+        </label>
+        <div id="abas" class="tabs" role="tablist"></div>
+        <div id="painel" class="panel" role="tabpanel"></div>
+        <p id="vazio" class="empty" data-i18n="vazio" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-in">
+      <span>© <span id="ano"></span> Luã Pelaes</span>
+      <a href="#top" class="up" data-i18n="topo"></a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
