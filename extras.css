@@ -1,0 +1,72 @@
+/* Estilos de projetos, último artigo e blog. Usa só os aliases --x-* de cada paleta. */
+
+/* rodapé sempre no fim da tela, mesmo em páginas curtas (evita o fundo repetir) */
+body { min-height: 100vh; display: flex; flex-direction: column; background-repeat: no-repeat; }
+main { flex: 1; }
+footer { margin-top: auto; }
+
+/* ordem da home: o bloco de tecnologias vem logo após a apresentação */
+.stack { padding-top: 0; }
+.stack + .section { padding-top: 56px; }
+
+/* projetos */
+.thumb {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--x-thumb);
+  color: var(--x-accent);
+  font: 700 2rem ui-monospace, "Cascadia Code", Consolas, monospace;
+  letter-spacing: .05em;
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card-date-solo { display: block; margin-bottom: 6px; }
+
+/* botão "Ver mais" no fim de uma lista de cards */
+.mais-btn { grid-column: 1 / -1; justify-self: center; color: var(--text); cursor: pointer; font-family: inherit; }
+
+/* último artigo e lista do blog */
+.kicker { margin: 0 0 8px; color: var(--x-accent); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.card-post { max-width: 760px; }
+.card-post h3 { font-size: 1.5rem; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: auto; }
+.link-seta { color: var(--x-accent); font-size: .95rem; text-decoration: none; }
+.link-seta:hover { text-decoration: underline; }
+
+/* página do blog */
+.blog-page { padding-top: 56px; padding-bottom: 96px; }
+.blog-head h1 { margin: 0 0 12px; font-size: clamp(2.2rem, 6vw, 3.25rem); font-weight: 600; line-height: 1.1; }
+.blog-head[hidden] { display: none; }
+.lead-left { max-width: 36rem; margin: 0 0 40px; color: var(--x-soft); }
+.post-list { display: grid; gap: 20px; }
+.post-list .card-post { max-width: none; }
+.post-list .card-post h3 a { text-decoration: none; }
+.post-list .card-post h3 a:hover { color: var(--x-accent); }
+.post-meta { margin: 0 0 8px; color: var(--x-muted); font-size: .85rem; }
+
+/* artigo */
+.post { max-width: 720px; margin-top: 24px; }
+.post h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 600; line-height: 1.15; }
+.post .tags { margin: 0 0 32px; }
+.post-corpo { color: var(--text); font-size: 1.05rem; line-height: 1.8; }
+.post-corpo p { margin: 0 0 20px; color: var(--x-soft); }
+.post-corpo h2 { margin: 40px 0 16px; font-size: 1.5rem; }
+.post-corpo h2::after { display: none; }
+.post-corpo h3 { margin: 32px 0 12px; font-size: 1.2rem; }
+.post-corpo ul { margin: 0 0 20px; padding-left: 22px; color: var(--x-soft); }
+.post-corpo li { margin-bottom: 6px; }
+.post-corpo a { color: var(--x-accent); }
+.post-corpo strong { color: var(--text); }
+.post-corpo code { padding: 1px 6px; border-radius: 4px; background: var(--x-surface); font: .9em ui-monospace, "Cascadia Code", Consolas, monospace; }
+.post-corpo pre { margin: 0 0 24px; padding: 16px 20px; overflow-x: auto; border: 1px solid var(--x-line); border-radius: 8px; background: var(--x-surface); }
+.post-corpo pre code { padding: 0; background: none; }
+
+.empty { padding: 32px 0; color: var(--x-soft); }
+
+@media (max-width: 760px) {
+  .stack + .section { padding-top: 40px; }
+}

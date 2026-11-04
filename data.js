@@ -4,29 +4,59 @@
 // Textos fixos da página. Cada chave corresponde a um data-i18n no index.html.
 window.TEXTOS = {
   pt: {
-    status: "disponível para conversar",
-    nav_conteudo: "Conteúdo",
-    cta: "Ver conteúdo",
-    titulo_conteudo: "Conteúdo",
-    lead: "Técnico em TI. Estudo segurança da informação na prática.",
-    busca: "Buscar por título, assunto ou tag",
-    vazio: "Nada encontrado para essa busca.",
+    ola: "Olá, eu sou",
+    cargo: "Técnico em TI.",
+    lead: "Estudo segurança da informação na prática e reúno aqui meus certificados e estudos.",
+    nav_inicio: "Início",
+    nav_projetos: "Projetos",
+    nav_estudos: "Estudos",
+    nav_certificados: "Certificados",
+    nav_blog: "Blog",
+    nav_contato: "Contato",
+    saiba_mais: "Ver mais",
+    blog_titulo: "Blog",
+    blog_intro: "Artigos sobre tecnologia, segurança e o que estou aprendendo.",
+    ultimo_artigo: "Último artigo",
+    ler_artigo: "Ler artigo",
+    todos_artigos: "Ver todos os artigos",
+    sem_artigos: "Nenhum artigo publicado ainda.",
+    voltar_blog: "← Voltar ao blog",
+    artigo_nao_encontrado: "Artigo não encontrado.",
+    min_leitura: "min de leitura",
+    mostrar_mais: "Ver mais",
+    mostrar_menos: "Ver menos",
+    tecnologias: "Tecnologias e plataformas que estudo",
+    contato_titulo: "Contato",
+    contato_texto: "Vamos conversar? Me encontre nos links abaixo.",
     topo: "voltar ao topo ↑",
-    item: "item",
-    itens: "itens",
     descricao: "Luã Pelaes, técnico em TI. Certificados, estudos e projetos em tecnologia e segurança."
   },
   en: {
-    status: "open to chat",
-    nav_conteudo: "Content",
-    cta: "Browse content",
-    titulo_conteudo: "Content",
-    lead: "IT technician. I study information security hands-on.",
-    busca: "Search by title, topic or tag",
-    vazio: "Nothing found for this search.",
+    ola: "Hi, I'm",
+    cargo: "IT technician.",
+    lead: "I study information security hands-on and gather my certifications and studies here.",
+    nav_inicio: "Home",
+    nav_projetos: "Projects",
+    nav_estudos: "Studies",
+    nav_certificados: "Certifications",
+    nav_blog: "Blog",
+    nav_contato: "Contact",
+    saiba_mais: "Learn more",
+    blog_titulo: "Blog",
+    blog_intro: "Articles about technology, security and what I'm learning.",
+    ultimo_artigo: "Latest article",
+    ler_artigo: "Read article",
+    todos_artigos: "View all articles",
+    sem_artigos: "No articles published yet.",
+    voltar_blog: "← Back to blog",
+    artigo_nao_encontrado: "Article not found.",
+    min_leitura: "min read",
+    mostrar_mais: "Show more",
+    mostrar_menos: "Show less",
+    tecnologias: "Technologies and platforms I study",
+    contato_titulo: "Contact",
+    contato_texto: "Let's talk? Find me through the links below.",
     topo: "back to top ↑",
-    item: "item",
-    itens: "items",
     descricao: "Luã Pelaes, IT technician. Certifications, studies and projects in technology and security."
   }
 };
@@ -35,8 +65,42 @@ window.TEXTOS = {
 // date: "AAAA-MM-DD" (opcional). url: "#" enquanto não tiver o link final.
 var CREDLY = "https://www.credly.com/users/lua-kristian-araujo-pelaes/badges";
 
+// layout: "projetos" mostra uma área de imagem no topo do card (imagem: "caminho.png", opcional).
 window.GRUPOS = [
   {
+    id: "projetos",
+    layout: "projetos",
+    titulo: { pt: "Projetos", en: "Projects" },
+    itens: [
+      {
+        titulo: { pt: "Projeto de exemplo 1", en: "Example project 1" },
+        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
+        url: "#",
+        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
+      },
+      {
+        titulo: { pt: "Projeto de exemplo 2", en: "Example project 2" },
+        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
+        url: "#",
+        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
+      },
+      {
+        titulo: { pt: "Projeto de exemplo 3", en: "Example project 3" },
+        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
+        url: "#",
+        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
+      },
+      {
+        titulo: { pt: "Projeto de exemplo 4", en: "Example project 4" },
+        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
+        url: "#",
+        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
+      }
+    ]
+  },
+  {
+    id: "certificados",
+    visiveis: 4, // quantos itens aparecem antes do botão "Ver mais"
     titulo: { pt: "Certificados", en: "Certifications" },
     itens: [
       {
@@ -90,6 +154,7 @@ window.GRUPOS = [
     ]
   },
   {
+    id: "estudos",
     titulo: { pt: "Estudos", en: "Studies" },
     itens: [
       {
