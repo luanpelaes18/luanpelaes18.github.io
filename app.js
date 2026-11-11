@@ -5,6 +5,40 @@
   var t = Site.t;
   var expandidos = {};
 
+  var GITHUB_USUARIO = 'luanpelaes18';
+  var GITHUB_REPOS_IGNORADOS = ['luanpelaes18.github.io'];
+
+  function repoParaItem(repo) {
+    var desc = repo.description;
+    return {
+      titulo: { pt: repo.name, en: repo.name },
+      desc: desc ? { pt: desc, en: desc } : null,
+      url: repo.html_url,
+      date: repo.pushed_at ? repo.pushed_at.slice(0, 10) : null,
+      tags: repo.language ? { pt: [repo.language], en: [repo.language] } : null
+    };
+  }
+
+  function carregarRepositorios() {
+    var grupoProjetos = grupos.filter(function (g) { return g.id === 'projetos'; })[0];
+    if (!grupoProjetos) return;
+    fetch('https://api.github.com/users/' + GITHUB_USUARIO + '/repos?per_page=100&sort=pushed')
+      .then(function (resp) {
+        if (!resp.ok) throw new Error('GitHub API respondeu ' + resp.status);
+        return resp.json();
+      })
+      .then(function (repos) {
+        var itens = repos
+          .filter(function (r) { return !r.fork && !r.archived && GITHUB_REPOS_IGNORADOS.indexOf(r.name) === -1; })
+          .map(repoParaItem);
+        if (itens.length) {
+          grupoProjetos.itens = itens;
+          render();
+        }
+      })
+      .catch(function (err) { console.warn('Não foi possível carregar os repositórios do GitHub:', err); });
+  }
+
   function montarCard(item, layout) {
     var tags = item.tags ? t(item.tags) : [];
     var card = el('article', 'card');
@@ -120,4 +154,5 @@
   }
 
   Site.init(render);
+  carregarRepositorios();
 })();

@@ -70,33 +70,10 @@ window.GRUPOS = [
   {
     id: "projetos",
     layout: "projetos",
+    visiveis: 6,
     titulo: { pt: "Projetos", en: "Projects" },
-    itens: [
-      {
-        titulo: { pt: "Projeto de exemplo 1", en: "Example project 1" },
-        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
-        url: "#",
-        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
-      },
-      {
-        titulo: { pt: "Projeto de exemplo 2", en: "Example project 2" },
-        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
-        url: "#",
-        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
-      },
-      {
-        titulo: { pt: "Projeto de exemplo 3", en: "Example project 3" },
-        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
-        url: "#",
-        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
-      },
-      {
-        titulo: { pt: "Projeto de exemplo 4", en: "Example project 4" },
-        desc: { pt: "Texto genérico de exemplo. Descreva aqui o objetivo do projeto, as tecnologias usadas e o resultado obtido.", en: "Generic sample text. Describe the project goal, the technologies used and the result here." },
-        url: "#",
-        tags: { pt: ["exemplo", "tecnologia"], en: ["example", "technology"] }
-      }
-    ]
+    // Preenchido em tempo real a partir dos repositórios públicos do GitHub (ver app.js).
+    itens: []
   },
   {
     id: "certificados",
