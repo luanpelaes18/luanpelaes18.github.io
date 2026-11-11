@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13152a">
+  <title>Luã Pelaes</title>
+  <meta name="description" content="Luã Pelaes, técnico em TI. Certificados, estudos e projetos em tecnologia e segurança.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extras.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#inicio" aria-label="Luã Pelaes"><span class="logo">LP</span></a>
+      <nav class="nav-right">
+        <a href="#inicio" data-i18n="nav_inicio"></a>
+        <a href="#projetos" data-i18n="nav_projetos"></a>
+        <a href="#estudos" data-i18n="nav_estudos"></a>
+        <a href="#certificados" data-i18n="nav_certificados"></a>
+        <a href="blog.html" data-i18n="nav_blog"></a>
+        <a href="#contato" data-i18n="nav_contato"></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="avatar" aria-hidden="true"><span>LP</span></div>
+      <p class="hello" data-i18n="ola"></p>
+      <h1>Luã <em>Pelaes</em></h1>
+      <p class="role"><span data-i18n="cargo"></span><i class="cursor" aria-hidden="true"></i></p>
+      <p class="lead" data-i18n="lead"></p>
+    </section>
+
+    <section id="tecnologias" class="stack">
+      <p class="stack-title" data-i18n="tecnologias"></p>
+      <ul id="lista-tecnologias" class="chips"></ul>
+      <div class="orbit" aria-hidden="true">
+        <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>
+        <span class="core">LP</span>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="wrap">
+        <h2 data-i18n-grupo="projetos"></h2>
+        <div class="cards" data-grupo="projetos"></div>
+      </div>
+    </section>
+
+    <section id="estudos" class="section">
+      <div class="wrap">
+        <h2 data-i18n-grupo="estudos"></h2>
+        <div class="features" data-grupo="estudos"></div>
+      </div>
+    </section>
+
+    <section id="certificados" class="section">
+      <div class="wrap">
+        <h2 data-i18n-grupo="certificados"></h2>
+        <div class="cards" data-grupo="certificados"></div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="wrap">
+        <h2 data-i18n="blog_titulo"></h2>
+        <div id="ultimo-artigo" class="features"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="wrap">
+        <h2 data-i18n="contato_titulo"></h2>
+        <p class="contact-text" data-i18n="contato_texto"></p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/luanpelaes18">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/luanpelaes/">LinkedIn</a>
+          <a class="btn" href="https://www.credly.com/users/lua-kristian-araujo-pelaes/badges/credly">Credly</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-in">
+      <span>© <span id="ano"></span> Luã Pelaes</span>
+      <a href="#inicio" class="up" data-i18n="topo"></a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="posts.js"></script>
+  <script src="common.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

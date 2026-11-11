@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13152a">
+  <title>Blog | Luã Pelaes</title>
+  <meta name="description" content="Artigos sobre tecnologia, segurança e o que estou aprendendo.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extras.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="index.html" aria-label="Luã Pelaes"><span class="logo">LP</span></a>
+      <nav class="nav-right">
+        <a href="index.html" data-i18n="nav_inicio"></a>
+        <a href="index.html#projetos" data-i18n="nav_projetos"></a>
+        <a href="index.html#estudos" data-i18n="nav_estudos"></a>
+        <a href="index.html#certificados" data-i18n="nav_certificados"></a>
+        <a href="blog.html" data-i18n="nav_blog" aria-current="page"></a>
+        <a href="index.html#contato" data-i18n="nav_contato"></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap blog-page">
+    <header id="blog-cabecalho" class="blog-head">
+      <h1 data-i18n="blog_titulo"></h1>
+      <p class="lead-left" data-i18n="blog_intro"></p>
+    </header>
+    <div id="blog-conteudo"></div>
+  </main>
+
+  <footer>
+    <div class="wrap foot-in">
+      <span>© <span id="ano"></span> Luã Pelaes</span>
+      <a href="#" class="up" data-i18n="topo"></a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="posts.js"></script>
+  <script src="common.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
