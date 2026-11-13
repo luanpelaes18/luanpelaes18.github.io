@@ -14,6 +14,7 @@
       titulo: { pt: repo.name, en: repo.name },
       desc: desc ? { pt: desc, en: desc } : null,
       url: repo.html_url,
+      imagem: (window.IMAGENS_PROJETOS || {})[repo.name] || null,
       date: repo.pushed_at ? repo.pushed_at.slice(0, 10) : null,
       tags: repo.language ? { pt: [repo.language], en: [repo.language] } : null
     };
@@ -48,7 +49,7 @@
       if (item.imagem) {
         var img = el('img');
         img.src = item.imagem;
-        img.alt = '';
+        img.alt = t(item.titulo);
         img.loading = 'lazy';
         thumb.appendChild(img);
       } else {

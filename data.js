@@ -66,6 +66,13 @@ window.TEXTOS = {
 var CREDLY = "https://www.credly.com/users/lua-kristian-araujo-pelaes/badges";
 
 // layout: "projetos" mostra uma área de imagem no topo do card (imagem: "caminho.png", opcional).
+
+// Imagem de capa dos projetos, pelo nome do repositório no GitHub.
+// Repositórios sem imagem aqui mostram o ícone padrão "</>".
+window.IMAGENS_PROJETOS = {
+  PokerTimerTournament: "img/poker-timer-tournament.png"
+};
+
 window.GRUPOS = [
   {
     id: "projetos",
